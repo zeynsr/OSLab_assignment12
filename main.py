@@ -136,7 +136,13 @@ class Game(arcade.Window) :
         elif symbol == arcade.key.LEFT:
             self.MySpaceShip.change_angle = 1
         elif symbol == arcade.key.RIGHT:      
-            self.MySpaceShip.change_angle = -1  
+            self.MySpaceShip.change_angle = -1 
+            
+            
+    def on_key_release(self, symbol: int, modifiers: int):
+        self.MySpaceShip.change_angle = 0
+        self.MySpaceShip.change_x = 0
+        self.MySpaceShip.change_y = 0        
 
 
 
